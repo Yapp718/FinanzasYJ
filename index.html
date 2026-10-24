@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Finanzas YJ</title><link rel="stylesheet" href="style.css"></head>
+<body style="margin:0;background:#f4f6f9">
+<div id="ffp">
+
+
+<div id="auth" class="card">
+  <h3>Ingresar / Registrarse</h3>
+  <input id="email" type="email" placeholder="Correo">
+  <input id="pass" type="password" placeholder="Contraseña (mín. 6)">
+  <button id="btnLogin">Ingresar</button> <button id="btnReg" class="sec">Registrarme</button>
+  <p id="authErr" class="err"></p>
+</div>
+
+<div id="app" style="display:none">
+  <div class="top">
+    <h2>-Dashboard- Finanzas</h2>
+    <div>Año <input id="anio" type="number" value="2026" style="width:80px">
+    Mes <select id="mes"></select>
+    Moneda <input id="mon" value="$" style="width:40px">
+    <span id="who"></span> <button id="btnOut" class="sec">Salir</button></div>
+  </div>
+  <p id="err" class="err"></p>
+  <div class="kpis" id="kpis"></div>
+  <div class="charts">
+    <div class="card"><canvas id="c1"></canvas></div>
+    <div class="card"><canvas id="c2"></canvas></div>
+    <div class="card"><canvas id="c3"></canvas></div>
+  </div>
+  <div class="grid" id="grid"></div>
+  <div class="grid">
+    <div class="card"><h3>Presupuesto 50/30/20</h3><div id="rule"></div></div>
+    <div class="card"><h3>Resumen por categoría</h3><table id="resumen"></table></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+
+</div>
+<script type="module" src="app.js"></script>
+</body></html>
