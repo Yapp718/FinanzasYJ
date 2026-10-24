@@ -1,4 +1,4 @@
-#ffp{--az:#1f4e79;--vd:#2f855a;--gr:#f4f6f9;max-width:1200px;margin:auto;font-family:system-ui,sans-serif;font-size:14px}
+#ffp{--az:#1b2f57;--vd:#3f6bb5;--gr:rgba(255,255,255,.45);max-width:1200px;margin:auto;font-family:system-ui,sans-serif;font-size:14px}
 #ffp .card{background:#fff;border:1px solid #dde2e8;border-radius:10px;padding:14px;margin:10px 0}
 #ffp h3{margin:0 0 8px;color:#fff;background:var(--az);padding:6px 10px;border-radius:6px;font-size:13px;letter-spacing:.5px;text-transform:uppercase}
 #ffp .top{background:var(--az);color:#fff;border-radius:10px;padding:14px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
@@ -21,3 +21,89 @@
 #ffp .bar i{display:block;height:100%;background:var(--vd)}
 #ffp .err{color:#c53030}
 #ffp .x{background:none;color:#c53030;padding:0 4px}
+
+/* ===== Diseño glass sobre degradado ===== */
+body{margin:0;min-height:100vh;background:linear-gradient(135deg,#dc9a92 0%,#bb7e98 28%,#8a6fa0 52%,#4b60a2 78%,#2b4f95 100%) fixed;background-attachment:fixed}
+#ffp{color:#16264a;padding:14px}
+#ffp .card{background:rgba(255,255,255,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.65);border-radius:18px;box-shadow:0 8px 28px rgba(20,30,70,.15)}
+#ffp h3{background:rgba(27,47,87,.92);border-radius:10px}
+#ffp .top{background:rgba(27,47,87,.88);backdrop-filter:blur(10px);border-radius:18px}
+#ffp .kpi{border:1px solid rgba(255,255,255,.6);border-radius:16px;color:#16264a}
+#ffp .kpi b{color:#1b2f57}
+#ffp td,#ffp th{border-bottom:1px solid rgba(27,47,87,.12)}
+#ffp tfoot td{background:rgba(255,255,255,.5)}
+#ffp .bar{background:rgba(27,47,87,.15)}
+#ffp .add input,#ffp .add select{background:rgba(255,255,255,.75)}
+
+/* ===== Login ===== */
+#auth{min-height:80vh;display:flex;align-items:center;justify-content:center}
+.lg-wrap{width:100%;max-width:360px;text-align:center;position:relative;margin-top:40px}
+.lg-avatar{width:104px;height:104px;border-radius:50%;background:#16264a;display:flex;align-items:center;justify-content:center;margin:0 auto -52px;position:relative;z-index:2;box-shadow:0 6px 18px rgba(20,30,70,.3)}
+.lg-card{background:rgba(255,255,255,.5);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.6);border-radius:26px;padding:72px 26px 22px;box-shadow:0 10px 30px rgba(20,30,70,.2)}
+.lg-field{display:flex;margin-bottom:14px;background:rgba(27,47,87,.78)}
+.lg-field .ic{background:#16264a;width:46px;display:flex;align-items:center;justify-content:center}
+#ffp .lg-field input{flex:1;background:transparent;border:0;color:#fff;padding:13px;font-size:14px;outline:none;border-radius:0}
+.lg-field input::placeholder{color:rgba(255,255,255,.7)}
+.lg-row{display:flex;justify-content:space-between;font-size:12px;margin-top:6px}
+.lg-row a{color:#16264a;font-style:italic}
+.lg-row label{display:flex;align-items:center;gap:4px}
+.lg-card .err{margin:10px 0 0;color:#7a1f3d;font-size:12px;min-height:14px}
+#ffp .lg-btn{margin-top:-10px;width:78%;padding:26px 0 14px;background:rgba(255,255,255,.45);backdrop-filter:blur(12px);color:#16264a;font-weight:700;letter-spacing:2px;border:1px solid rgba(255,255,255,.6);border-radius:0 0 22px 22px;position:relative;z-index:0}
+#ffp .lg-btn:hover{background:rgba(255,255,255,.7)}
+.lg-reg{display:block;margin-top:16px;color:#fff;font-size:13px;text-decoration:none}
+
+
+/* ===== Login centrado y más grande ===== */
+#auth{min-height:92vh}
+.lg-wrap{max-width:460px;margin:0 auto}
+.lg-avatar{width:132px;height:132px;margin-bottom:-66px}
+.lg-avatar svg{width:60px;height:60px}
+.lg-card{padding:92px 34px 28px;border-radius:32px}
+.lg-field{margin-bottom:18px}
+.lg-field .ic{width:60px}
+.lg-field .ic svg{width:24px;height:24px}
+#ffp .lg-field input{padding:17px;font-size:16px}
+.lg-row{font-size:14px}
+#ffp .lg-btn{padding:30px 0 16px;font-size:16px;margin-top:-12px}
+.lg-reg{font-size:15px;margin-top:20px}
+
+/* ===== Celdas editables ===== */
+#ffp .ed{width:86px;padding:4px 5px;background:rgba(255,255,255,.7);border:1px solid rgba(27,47,87,.2);border-radius:6px;color:#16264a}
+#ffp .ed.tx{width:100%;min-width:90px}
+#ffp .ed:focus{outline:2px solid #3f6bb5;background:#fff}
+
+/* ===== Botón editar y fila en edición ===== */
+#ffp .x.ok{color:#1b2f57;font-size:15px}
+#ffp tr.editing td{background:rgba(63,107,181,.22)}
+#ffp .card{overflow-x:auto}
+
+/* ===== Tablas más grandes y con más aire ===== */
+#ffp{font-size:15px}
+#ffp .grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));gap:18px}
+#ffp .card{padding:20px}
+#ffp h3{font-size:14px;padding:10px 14px;margin-bottom:14px}
+#ffp td,#ffp th{padding:12px 10px}
+#ffp th{font-size:12px;letter-spacing:.4px}
+#ffp td{font-size:15px}
+#ffp tfoot td{font-size:15px}
+#ffp .add{gap:10px;margin-top:16px}
+#ffp .add input,#ffp .add select,#ffp .add button{padding:11px 12px;font-size:14px}
+#ffp .add input[type=text]{min-width:140px}
+#ffp .add input[type=number]{width:110px}
+#ffp .x{font-size:17px;padding:2px 8px}
+#ffp .x.ok{font-size:18px}
+#ffp input[type=checkbox]{width:18px;height:18px}
+#ffp .kpi{padding:18px}
+
+/* ===== Interruptor de presupuesto ===== */
+#ffp .sw{display:inline-flex;align-items:center;gap:6px;color:#fff;font-size:14px;margin:0 10px;cursor:pointer}
+#ffp .sw input{width:18px;height:18px}
+#ffp.no-pres .cp{display:none !important}
+
+#ffp button.xl{background:#2f855a;color:#fff}
+
+#ffp .meta{margin:12px 0}
+#ffp .mh{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:5px 0;flex-wrap:wrap}
+#ffp .okmsg{color:#2f855a;font-weight:600}
+#ffp #cpBox summary{cursor:pointer}
+#ffp #cpSecs{display:flex;flex-wrap:wrap;gap:6px 16px;margin:8px 0}
